@@ -3,9 +3,10 @@ const { User, Song, Artist, UserSong } = require('../models')
 class SongController {
       static showSong(req, res) {
             let userId = req.session.userId
-            // console.log(req.session.userId);
-            Song.findAll({include: [Artist]}) 
+            console.log(req.session.userId, "INI DARI SHOW SONG CONTROLLER");
+            Song.findAll({include: [Artist, User]}) 
                   .then(data => {
+                        // res.send(data)
                         res.render('./user/songs', {song: data, userId} )
                   //      console.log(userId)
                   res.send(data)
@@ -24,6 +25,7 @@ class SongController {
             
             UserSong.create(newUsersong)
                   .then(data => {
+                        console.log(req.session.userId, "INI DARI ADD PLAYLIST CONTROLLER");
                         res.redirect(`/yourmusic/profile/playlist/${newUsersong.UserId}`)
                   })
                   .catch(err => {
@@ -46,7 +48,7 @@ class SongController {
 
       static playSong(req, res) {
             let id = req.params.id
-
+            console.log(req.session.userId, "INI DARI SHOW SONG CONTROLLER");
             Song.findByPk(id, {include: [Artist]})
                   .then(data => {
                         res.render('./user/playpage', {song: data})

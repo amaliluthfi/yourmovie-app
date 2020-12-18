@@ -17,9 +17,11 @@
                               <% if(!el.Artist) { %>
                                     <%= el.Artist = "unknown" %>
                               <% } else { %>
-                                    <%= el.Artist.name %>
+                                    <%= el.Artist.name %> <br>
                              <% }%>
+                             <%= el.Users.length %> listeners
                         </th>
+
                         <th>
                               <a href="/yourmusic/profile/playlist/add/<%= userId%>/<%= el.id %>">add to playlist</a><br>
                               <a href="/yourmusic/songs/play/<%= el.id %>">play</a>

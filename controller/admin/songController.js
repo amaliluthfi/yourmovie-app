@@ -13,6 +13,7 @@ class Controller {
             })
     }
     static addSong(req, res){
+        console.log(req.session.userId, "INI DARI ADD SONG CONTROLLER");
         Artist.findAll()
             .then(function(artist){
                 // res.send(artist)
