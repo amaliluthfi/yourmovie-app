@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Blessed",
+        "urlSong": "https://media1.vocaroo.com/mp3/14FxNkdvvvjE",
+        "urlImg":"https://secureservercdn.net/198.71.233.64/100.949.myftpupload.com/wp-content/uploads/2017/10/Daniel-Caesar-album.jpg",
+        "ArtistId": 1
+
+    },
+    {
+        "name": "Get You",
+        "urlSong": "https://media1.vocaroo.com/mp3/19azRE7yiXq7",
+        "urlImg":"https://musicalsoulsite.files.wordpress.com/2017/09/maxresdefault.jpg",
+        "ArtistId": 1
+    },
+    {
+        "name": "At My Worst",
+        "urlSong": "https://media1.vocaroo.com/mp3/14F905vgq94n",
+        "urlImg":"https://asset-a.grid.id/crop/0x0:0x0/750x504/photo/2020/11/20/2528722237.jpg",
+        "ArtistId": 3
+    },
+    {
+        "name": "Untuk Apa",
+        "urlSong": "https://media1.vocaroo.com/mp3/1dJjhgoatSIN",
+        "urlImg":"https://www.mldspot.com/sites/default/files/styles/max_1300x1300/public/field/image/Hindia.jpg?itok=5cGmXeJu",
+        "ArtistId": 2
+    },
+    {
+        "name": "Sunday Best",
+        "urlSong": "https://media1.vocaroo.com/mp3/177Zv7Gv9PXh",
+        "urlImg":"https://i.ytimg.com/vi/qBGDrV2h2Oo/maxresdefault.jpg",
+        "ArtistId": 4
+    },
+    {
+        "name": "Slow Dancing In the Dark",
+        "urlSong": "https://media1.vocaroo.com/mp3/1b82V8MsihN9",
+        "urlImg":"https://i1.sndcdn.com/artworks-000406584354-ergqvh-t500x500.jpg",
+        "ArtistId": 5
+    },
+    {
+        "name": "Honesty",
+        "urlSong": "https://media1.vocaroo.com/mp3/1dJjhgoatSIN",
+        "urlImg": "https://images.genius.com/2f30c08a8b3c6b1e4261059cf43c2b03.640x640x1.jpg",
+        "ArtistId": 3
+    }
+
+]

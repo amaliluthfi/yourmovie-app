@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Songs</title>
+</head>
+<body>
+      <%- include('../partials/navbar') %>
+      <h1>Artists</h1>
+      <table>
+            <% artist.forEach(el => { %>
+                  <tr style="text-align: left;">
+                        <th><%= el.name %></th>
+                        <td><%= el.label %></td>
+                        <th>
+                              <a href="/yourmusic/artists/<%= el.id %>/songs">See artist</a>
+                        </th>
+                  </tr>
+            <% }) %>
+      </table>
+      
+</body>
+</html>

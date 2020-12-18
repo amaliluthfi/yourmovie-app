@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Artist Page</title>
+</head>
+<body>
+      <%- include('../partials/navbar') %>
+      <h1><%= artist[0].name %></h1>
+      <di>
+            <table>
+                
+                        <% artist[0].Songs.forEach(song => { %>
+                              <tr>
+                                    <th><img src="<%= song.urlImg %>" alt="<%= song.name %>" width="100" height="100"></th>
+                                    <th><%= song.name %></th>
+                                    
+                              </tr>
+                        <% }) %>
+            </table>
+      </di>
+</body>
+</html>

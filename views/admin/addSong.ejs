@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Song</title>
+</head>
+<body>
+    <%- include('../partial/navbar', {pagename: 'Add Song'}) %>
+    <a href='/admin/song'>Kembali Ke Database Songs</a>
+    <form action="/admin/song/add" method="POST">
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name"><br>
+        </div>
+        <div>
+            <label for="urlImg">Url Image</label><br>
+            <input type="text" name="urlImg" id="urlImg"><br>
+        </div>
+        <div>
+            <label for="urlSong">Url Song</label><br>
+            <input type="text" name="urlSong" id="urlSong"><br>
+        </div>
+        <div>
+            <label for="ArtistId">Artist</label><br>
+            <select id="ArtistId" name="ArtistId">
+                <% artist.forEach(function(item){ %>
+                <option value="<%= item.id%>"><%= item.name%></option>
+                <% }) %>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+    <%- include('../partial/footer') %>
+</body>
+</html>

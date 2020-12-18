@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>playlist</title>
+</head>
+<body>
+      <%- include('../partials/navbar') %>
+      <h1>Songs</h1>
+
+      <table>
+            <% songs.Songs.forEach(el => { %>
+                  <tr style="text-align: left;">
+                        <th><img src="<%= el.urlImg %>" alt="blessed" width="100" height="100"></th>
+                        <th><%= el.name %></th>
+                        <th>
+                              <a href="/yourmusic/songs/play/<%= el.id %>">play</a>
+                        </th>
+                  </tr>
+            <% }) %>
+      </table>
+      
+</body>
+</html>

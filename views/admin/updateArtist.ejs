@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Artist</title>
+</head>
+<body>
+    <%- include('../partial/navbar', {pagename: 'Update Artist'}) %>
+
+    <form action="/admin/artist/edit/<%= artist[0].id %>" method="Post">
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name"  value="<%= artist[0].name %>">
+        </div>
+        <div>
+            <label for="label">Label</label><br>
+            <input type="integer" name="label" id="label" value="<%= artist[0].label %>">
+        </div>
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+    <%- include('../partial/footer') %>
+</body>
+</html>

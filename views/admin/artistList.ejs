@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+</head>
+<body>
+    <%- include('../partial/navbar', {pagename: 'Artists'}) %>
+    <br>
+    <table border= 1>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Label</th>
+                <th>Songs</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% Artists.forEach( function(item, No){ %>
+                <% let songs = [] %>
+                <% for (let i = 0; i < item.Songs.length; i++){ %>
+                    <% songs.push(item.Songs[i].name) %>
+                <% } %>
+                <tr>
+                    <td><%= item.id%></td>
+                    <td><%= item.name %></td>
+                    <td><%= item.label %></td>
+                    <td><%= songs.join(', ') %></td>
+                    <td><a href="/admin/artist/edit/<%= item.id %>">Edit</a> | <a href="/admin/artist/delete/<%= item.id %>" tabindex="-1" role="button" onclick="return confirm('Are you sure wanna delete <%= item.name%> from list?')">Delete</a> | <a href="/admin/song/add">Add Song</a></td>
+                </tr>
+                
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/admin/artist/add">Add Artist</a>
+    <%- include('../partial/footer') %>
+</body>
+</html>

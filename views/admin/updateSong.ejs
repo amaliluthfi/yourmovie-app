@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Song</title>
+</head>
+<body>
+    <%- include('../partial/navbar', {pagename: 'Update Song'}) %>
+
+    <form action="/admin/song/edit/<%= song[0].id %>" method="Post">
+        <div>
+            <label for="name">Song</label><br>
+            <input type="text" name="name" id="name"  value="<%= song[0].name %>">
+        </div>
+        <div>
+            <label for="urlImg">Url Image</label><br>
+            <input type="integer" name="urlImg" id="urlImg" value="<%= song[0].urlImg %>">
+        </div>
+        <div>
+            <label for="urlSong">Url Song</label><br>
+            <input type="integer" name="urlSong" id="urlSong" value="<%= song[0].urlSong %>">
+        </div>
+        <div>
+            <label for="ArtistId">Artist</label><br>
+            <select id="ArtistId" name="ArtistId">
+                <% artist.forEach(function(item){ %>
+                <option value="<%= item.id%>"><%= item.name%></option>
+                <% }) %>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+    <%- include('../partial/footer') %>
+</body>
+</html>

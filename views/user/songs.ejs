@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Songs</title>
+</head>
+<body>
+      <%- include('../partials/navbar') %>
+      <h1>Songs</h1>
+
+      <table>
+            <% song.forEach(el => { %>
+                  <tr style="text-align: left;">
+                        <th><img src="<%= el.urlImg %>" alt="blessed" width="100" height="100"></th>
+                        <th><%= el.name %><br>
+                              <% if(!el.Artist) { %>
+                                    <%= el.Artist = "unknown" %>
+                              <% } else { %>
+                                    <%= el.Artist.name %>
+                             <% }%>
+                        </th>
+                        <th>
+                              <a href="/yourmusic/profile/playlist/add/<%= userId%>/<%= el.id %>">add to playlist</a><br>
+                              <a href="/yourmusic/songs/play/<%= el.id %>">play</a>
+                        </th>
+                  </tr>
+            <% }) %>
+      </table>
+      
+</body>
+</html>
